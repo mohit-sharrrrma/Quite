@@ -82,7 +82,7 @@ export default function App() {
             <ChevronLeft className="w-5 h-5" />
           </button>
           
-          <div className="flex gap-1">
+          <div className="hidden md:flex gap-1">
             {slides.map((_, idx) => (
               <button
                 key={idx}

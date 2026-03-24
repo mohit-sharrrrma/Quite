@@ -35,17 +35,17 @@ export const slides = [
           variants={containerVariants}
           initial="hidden"
           animate="show"
-          className="relative z-10 max-w-5xl w-full px-12 flex flex-col items-start"
+          className="relative z-10 max-w-5xl w-full px-6 md:px-12 flex flex-col items-start"
         >
-          <motion.div variants={itemVariants} className="mb-6 px-4 py-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-400 text-sm font-medium tracking-wide uppercase">
+          <motion.div variants={itemVariants} className="mb-3 md:mb-6 px-4 py-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-400 text-sm font-medium tracking-wide uppercase">
             The first 0% Commission Subscription Platform for Paris
           </motion.div>
           
-          <motion.h1 variants={itemVariants} className="text-7xl md:text-9xl font-bold tracking-tighter mb-6 text-white">
+          <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl lg:text-9xl font-bold tracking-tighter mb-3 md:mb-6 text-white">
             {BRAND_NAME}<span className="text-amber-500">.</span>
           </motion.h1>
           
-          <motion.p variants={itemVariants} className="text-2xl md:text-4xl font-light text-zinc-300 mb-12 max-w-2xl leading-tight">
+          <motion.p variants={itemVariants} className="text-xl md:text-2xl lg:text-4xl font-light text-zinc-300 mb-6 md:mb-12 max-w-2xl leading-tight">
             Empowering Drivers.<br/>
             <span className="font-medium text-white">Fairer Rides.</span>
           </motion.p>
@@ -61,13 +61,13 @@ export const slides = [
   {
     id: 'problem',
     component: () => (
-      <div className="w-full h-full flex flex-col md:flex-row bg-zinc-950">
-        <div className="w-full md:w-1/2 p-12 md:p-24 flex flex-col justify-center">
+      <div className="w-full h-full flex flex-col md:flex-row bg-zinc-950 overflow-y-auto">
+        <div className="w-full md:w-1/2 p-6 md:p-12 lg:p-24 flex flex-col justify-center">
           <motion.div variants={containerVariants} initial="hidden" animate="show">
             <motion.h2 variants={itemVariants} className="text-amber-500 font-mono text-sm tracking-widest uppercase mb-4">01 / The Problem</motion.h2>
-            <motion.h3 variants={itemVariants} className="text-5xl font-bold tracking-tight mb-12">A Broken System.</motion.h3>
+            <motion.h3 variants={itemVariants} className="text-3xl md:text-5xl font-bold tracking-tight mb-6 md:mb-12">A Broken System.</motion.h3>
             
-            <div className="space-y-8">
+            <div className="space-y-4 md:space-y-8">
               {[
                 { title: 'The "Commission Trap"', desc: 'Uber/Bolt take 25% of every single fare.', icon: Euro },
                 { title: 'Inflation', desc: 'Rising fuel and insurance costs are crushing driver margins.', icon: TrendingUp },
@@ -102,16 +102,16 @@ export const slides = [
   {
     id: 'solution',
     component: () => (
-      <div className="w-full h-full p-12 md:p-24 flex flex-col bg-zinc-950 relative overflow-hidden">
+      <div className="w-full h-full p-6 md:p-12 lg:p-24 flex flex-col bg-zinc-950 relative overflow-y-auto">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-zinc-900/30 rounded-l-[100px] -mr-20" />
         
-        <motion.div variants={containerVariants} initial="hidden" animate="show" className="relative z-10 h-full flex flex-col">
+        <motion.div variants={containerVariants} initial="hidden" animate="show" className="relative z-10 min-h-full flex flex-col">
           <motion.h2 variants={itemVariants} className="text-amber-500 font-mono text-sm tracking-widest uppercase mb-4">02 / The Solution</motion.h2>
-          <motion.h3 variants={itemVariants} className="text-5xl font-bold tracking-tight mb-16">The "SaaS" Model.</motion.h3>
+          <motion.h3 variants={itemVariants} className="text-3xl md:text-5xl font-bold tracking-tight mb-4 md:mb-16">The "SaaS" Model.</motion.h3>
           
-          <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <motion.div variants={itemVariants} className="bg-zinc-900/80 backdrop-blur-xl border border-zinc-800 rounded-3xl p-10 shadow-2xl">
-              <div className="flex flex-col items-center justify-center space-y-8">
+          <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 md:p-8 lg:gap-16 items-center">
+            <motion.div variants={itemVariants} className="bg-zinc-900/80 backdrop-blur-xl border border-zinc-800 rounded-3xl p-6 md:p-10 shadow-2xl">
+              <div className="flex flex-col items-center justify-center space-y-4 md:space-y-8">
                 <div className="flex items-center justify-between w-full max-w-sm p-6 bg-zinc-950 rounded-2xl border border-zinc-800">
                   <span className="text-xl font-medium text-zinc-300">Rider Fare</span>
                   <ArrowRight className="text-amber-500" />
@@ -126,7 +126,7 @@ export const slides = [
               </div>
             </motion.div>
             
-            <div className="space-y-10">
+            <div className="space-y-4 md:space-y-6 md:space-y-10">
               {[
                 { title: '0% Commission', desc: 'Drivers keep every Euro the rider pays. No hidden fees.' },
                 { title: 'Flat Monthly Fee', desc: 'Drivers pay a fixed subscription (e.g., €150/month).' },
@@ -136,7 +136,7 @@ export const slides = [
                 <motion.div key={i} variants={itemVariants} className="flex gap-4 items-start">
                   <CheckCircle2 className="w-6 h-6 text-amber-500 shrink-0 mt-1" />
                   <div>
-                    <h4 className="text-2xl font-medium text-zinc-100 mb-2">{item.title}</h4>
+                    <h4 className="text-xl md:text-2xl font-medium text-zinc-100 mb-2">{item.title}</h4>
                     <p className="text-zinc-400 text-lg">{item.desc}</p>
                   </div>
                 </motion.div>
@@ -150,7 +150,7 @@ export const slides = [
   {
     id: 'market',
     component: () => (
-      <div className="w-full h-full flex flex-col md:flex-row bg-zinc-950">
+      <div className="w-full h-full flex flex-col md:flex-row bg-zinc-950 overflow-y-auto">
         <div className="w-full md:w-1/2 relative hidden md:block">
           <img 
             src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1200&auto=format&fit=crop" 
@@ -165,25 +165,25 @@ export const slides = [
             </div>
           </div>
         </div>
-        <div className="w-full md:w-1/2 p-12 md:p-24 flex flex-col justify-center">
+        <div className="w-full md:w-1/2 p-6 md:p-12 lg:p-24 flex flex-col justify-center">
           <motion.div variants={containerVariants} initial="hidden" animate="show">
             <motion.h2 variants={itemVariants} className="text-amber-500 font-mono text-sm tracking-widest uppercase mb-4">03 / Market Opportunity</motion.h2>
-            <motion.h3 variants={itemVariants} className="text-5xl font-bold tracking-tight mb-12">France & Paris.</motion.h3>
+            <motion.h3 variants={itemVariants} className="text-3xl md:text-5xl font-bold tracking-tight mb-6 md:mb-12">France & Paris.</motion.h3>
             
-            <div className="space-y-12">
+            <div className="space-y-4 md:space-y-6 md:space-y-12">
               <motion.div variants={itemVariants} className="border-l-2 border-amber-500 pl-6">
-                <h4 className="text-3xl font-light text-zinc-100 mb-2">Market Size</h4>
-                <p className="text-xl text-zinc-400">Over <strong className="text-white font-semibold">30,000</strong> licensed VTC drivers in the Île-de-France region.</p>
+                <h4 className="text-2xl md:text-3xl font-light text-zinc-100 mb-2">Market Size</h4>
+                <p className="text-lg md:text-xl text-zinc-400">Over <strong className="text-white font-semibold">30,000</strong> licensed VTC drivers in the Île-de-France region.</p>
               </motion.div>
               
               <motion.div variants={itemVariants} className="border-l-2 border-amber-500 pl-6">
-                <h4 className="text-3xl font-light text-zinc-100 mb-2">Target Segment</h4>
-                <p className="text-xl text-zinc-400">Focus exclusively on the Paris <strong className="text-white font-semibold">High-End (Berline)</strong> and <strong className="text-white font-semibold">Airport</strong> segments first.</p>
+                <h4 className="text-2xl md:text-3xl font-light text-zinc-100 mb-2">Target Segment</h4>
+                <p className="text-lg md:text-xl text-zinc-400">Focus exclusively on the Paris <strong className="text-white font-semibold">High-End (Berline)</strong> and <strong className="text-white font-semibold">Airport</strong> segments first.</p>
               </motion.div>
               
               <motion.div variants={itemVariants} className="border-l-2 border-amber-500 pl-6">
-                <h4 className="text-3xl font-light text-zinc-100 mb-2">Perfect Timing</h4>
-                <p className="text-xl text-zinc-400">Post-Olympic Paris is seeking <strong className="text-white font-semibold">"Ethical Tech"</strong> alternatives amidst high anti-Uber sentiment.</p>
+                <h4 className="text-2xl md:text-3xl font-light text-zinc-100 mb-2">Perfect Timing</h4>
+                <p className="text-lg md:text-xl text-zinc-400">Post-Olympic Paris is seeking <strong className="text-white font-semibold">"Ethical Tech"</strong> alternatives amidst high anti-Uber sentiment.</p>
               </motion.div>
             </div>
           </motion.div>
@@ -194,28 +194,28 @@ export const slides = [
   {
     id: 'validation',
     component: () => (
-      <div className="w-full h-full p-12 md:p-24 flex flex-col bg-zinc-950">
-        <motion.div variants={containerVariants} initial="hidden" animate="show" className="h-full flex flex-col">
+      <div className="w-full h-full p-6 md:p-12 lg:p-24 flex flex-col bg-zinc-950 overflow-y-auto">
+        <motion.div variants={containerVariants} initial="hidden" animate="show" className="min-h-full flex flex-col">
           <motion.h2 variants={itemVariants} className="text-amber-500 font-mono text-sm tracking-widest uppercase mb-4">04 / Market Validation</motion.h2>
-          <motion.h3 variants={itemVariants} className="text-5xl font-bold tracking-tight mb-12">Proven in the US. Blue Ocean in Paris.</motion.h3>
+          <motion.h3 variants={itemVariants} className="text-3xl md:text-5xl font-bold tracking-tight mb-6 md:mb-12">Proven in the US. Blue Ocean in Paris.</motion.h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 md:p-8 mb-6 md:mb-12">
             {[
               { name: 'Empower', region: 'United States', desc: 'Tens of thousands of drivers saving millions in commission. Flat subscription model.', icon: Globe },
               { name: 'Wridz', region: 'United States', desc: 'Expanding across mid-sized US markets. 100% take-home pay with a focus on safety.', icon: Shield },
               { name: 'inDrive', region: 'Global', desc: 'Proved that drivers and riders are desperate for alternatives to algorithmic pricing.', icon: TrendingUp },
             ].map((item, i) => (
-              <motion.div key={i} variants={itemVariants} className="bg-zinc-900/50 border border-zinc-800 rounded-3xl p-8 flex flex-col">
-                <item.icon className="w-10 h-10 text-amber-500 mb-6" />
-                <h4 className="text-2xl font-semibold text-white mb-2">{item.name}</h4>
+              <motion.div key={i} variants={itemVariants} className="bg-zinc-900/50 border border-zinc-800 rounded-3xl p-6 md:p-8 flex flex-col">
+                <item.icon className="w-10 h-10 text-amber-500 mb-3 md:mb-6" />
+                <h4 className="text-xl md:text-2xl font-semibold text-white mb-2">{item.name}</h4>
                 <p className="text-amber-500/80 text-sm font-mono mb-4">{item.region}</p>
                 <p className="text-zinc-400">{item.desc}</p>
               </motion.div>
             ))}
           </div>
 
-          <motion.div variants={itemVariants} className="mt-auto bg-amber-500/10 border border-amber-500/30 rounded-2xl p-8 text-center">
-            <h4 className="text-2xl font-medium text-amber-400 mb-2">The Paris Opportunity</h4>
+          <motion.div variants={itemVariants} className="mt-auto bg-amber-500/10 border border-amber-500/30 rounded-2xl p-6 md:p-8 text-center">
+            <h4 className="text-xl md:text-2xl font-medium text-amber-400 mb-2">The Paris Opportunity</h4>
             <p className="text-zinc-300 text-lg">No one has successfully captured the premium European market (Paris Berline) with the SaaS model yet. This is our blue ocean.</p>
           </motion.div>
         </motion.div>
@@ -225,12 +225,12 @@ export const slides = [
   {
     id: 'competition',
     component: () => (
-      <div className="w-full h-full p-12 md:p-24 flex flex-col bg-zinc-950">
-        <motion.div variants={containerVariants} initial="hidden" animate="show" className="h-full flex flex-col">
+      <div className="w-full h-full p-6 md:p-12 lg:p-24 flex flex-col bg-zinc-950 overflow-y-auto">
+        <motion.div variants={containerVariants} initial="hidden" animate="show" className="min-h-full flex flex-col">
           <motion.h2 variants={itemVariants} className="text-amber-500 font-mono text-sm tracking-widest uppercase mb-4">05 / Competitive Landscape</motion.h2>
-          <motion.h3 variants={itemVariants} className="text-5xl font-bold tracking-tight mb-12">The Paris Battlefield.</motion.h3>
+          <motion.h3 variants={itemVariants} className="text-3xl md:text-5xl font-bold tracking-tight mb-6 md:mb-12">The Paris Battlefield.</motion.h3>
 
-          <div className="flex-1 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 md:p-8">
             {[
               { 
                 name: 'Uber', 
@@ -254,10 +254,10 @@ export const slides = [
                 color: 'border-blue-500/30'
               },
             ].map((item, i) => (
-              <motion.div key={i} variants={itemVariants} className={`bg-zinc-900/50 border ${item.color} rounded-3xl p-8 flex flex-col relative overflow-hidden`}>
-                <div className="absolute top-0 right-0 p-6 opacity-10 text-6xl font-bold text-white">{i + 1}</div>
-                <h4 className="text-3xl font-bold text-white mb-1">{item.name}</h4>
-                <p className="text-amber-500 font-mono text-sm mb-6">{item.role} • {item.share}</p>
+              <motion.div key={i} variants={itemVariants} className={`bg-zinc-900/50 border ${item.color} rounded-3xl p-6 md:p-8 flex flex-col relative overflow-hidden`}>
+                <div className="absolute top-0 right-0 p-6 opacity-10 text-4xl md:text-6xl font-bold text-white">{i + 1}</div>
+                <h4 className="text-2xl md:text-3xl font-bold text-white mb-1">{item.name}</h4>
+                <p className="text-amber-500 font-mono text-sm mb-3 md:mb-6">{item.role} • {item.share}</p>
                 
                 <div className="mt-auto">
                   <p className="text-zinc-500 text-xs uppercase tracking-wider mb-2">Key Weakness</p>
@@ -267,9 +267,9 @@ export const slides = [
             ))}
           </div>
 
-          <motion.div variants={itemVariants} className="mt-12 bg-amber-500/10 border border-amber-500/30 rounded-2xl p-8 flex items-center justify-between">
+          <motion.div variants={itemVariants} className="mt-6 md:mt-12 bg-amber-500/10 border border-amber-500/30 rounded-2xl p-6 md:p-8 flex items-center justify-between">
             <div>
-              <h4 className="text-2xl font-medium text-amber-400 mb-2">The {BRAND_NAME} Exploit</h4>
+              <h4 className="text-xl md:text-2xl font-medium text-amber-400 mb-2">The {BRAND_NAME} Exploit</h4>
               <p className="text-zinc-300 text-lg">By shifting to a 0% commission SaaS model, we instantly capture the market's most constrained resource: <strong className="text-white">Driver Supply.</strong></p>
             </div>
             <div className="hidden md:flex w-16 h-16 rounded-full bg-amber-500/20 items-center justify-center shrink-0 ml-8">
@@ -289,14 +289,14 @@ export const slides = [
       ];
 
       return (
-        <div className="w-full h-full p-12 md:p-24 flex flex-col bg-zinc-950">
-          <motion.div variants={containerVariants} initial="hidden" animate="show" className="h-full flex flex-col">
+        <div className="w-full h-full p-6 md:p-12 lg:p-24 flex flex-col bg-zinc-950 overflow-y-auto">
+          <motion.div variants={containerVariants} initial="hidden" animate="show" className="min-h-full flex flex-col">
             <motion.h2 variants={itemVariants} className="text-amber-500 font-mono text-sm tracking-widest uppercase mb-4">06 / Driver Value Proposition</motion.h2>
-            <motion.h3 variants={itemVariants} className="text-5xl font-bold tracking-tight mb-12">The Math.</motion.h3>
+            <motion.h3 variants={itemVariants} className="text-3xl md:text-5xl font-bold tracking-tight mb-6 md:mb-12">The Math.</motion.h3>
             
-            <div className="flex-1 flex flex-col lg:flex-row gap-16 items-center">
-              <motion.div variants={itemVariants} className="w-full lg:w-1/2 space-y-8">
-                <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8">
+            <div className="flex-1 flex flex-col lg:flex-row gap-4 md:gap-6 md:p-8 lg:gap-16 items-center">
+              <motion.div variants={itemVariants} className="w-full lg:w-1/2 space-y-4 md:space-y-8">
+                <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-6 md:p-8">
                   <h4 className="text-zinc-400 mb-2">Traditional App</h4>
                   <div className="flex justify-between items-end mb-4">
                     <span className="text-xl">€5,000 Turnover</span>
@@ -304,11 +304,11 @@ export const slides = [
                   </div>
                   <div className="pt-4 border-t border-zinc-800 flex justify-between items-center">
                     <span className="text-zinc-500">Net to Driver</span>
-                    <span className="text-3xl font-bold text-white">€3,750</span>
+                    <span className="text-2xl md:text-3xl font-bold text-white">€3,750</span>
                   </div>
                 </div>
 
-                <div className="bg-amber-500/10 border border-amber-500/30 rounded-2xl p-8 relative overflow-hidden">
+                <div className="bg-amber-500/10 border border-amber-500/30 rounded-2xl p-6 md:p-8 relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/20 blur-3xl rounded-full" />
                   <h4 className="text-amber-400 mb-2">{BRAND_NAME}</h4>
                   <div className="flex justify-between items-end mb-4">
@@ -317,7 +317,7 @@ export const slides = [
                   </div>
                   <div className="pt-4 border-t border-amber-500/20 flex justify-between items-center">
                     <span className="text-zinc-400">Net to Driver</span>
-                    <span className="text-4xl font-bold text-white">€4,850</span>
+                    <span className="text-3xl md:text-4xl font-bold text-white">€4,850</span>
                   </div>
                 </div>
 
@@ -329,7 +329,7 @@ export const slides = [
                 </div>
               </motion.div>
 
-              <motion.div variants={itemVariants} className="w-full lg:w-1/2 h-[400px]">
+              <motion.div variants={itemVariants} className="w-full lg:w-1/2 h-[250px] md:h-[400px]">
                 <ResponsiveContainer width="100%" height="100%">
                   <BarChart data={data} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
                     <CartesianGrid strokeDasharray="3 3" stroke="#27272a" vertical={false} />
@@ -363,16 +363,16 @@ export const slides = [
       ];
 
       return (
-        <div className="w-full h-full p-12 md:p-24 flex flex-col bg-zinc-950">
-          <motion.div variants={containerVariants} initial="hidden" animate="show" className="h-full flex flex-col">
+        <div className="w-full h-full p-6 md:p-12 lg:p-24 flex flex-col bg-zinc-950 overflow-y-auto">
+          <motion.div variants={containerVariants} initial="hidden" animate="show" className="min-h-full flex flex-col">
             <motion.h2 variants={itemVariants} className="text-amber-500 font-mono text-sm tracking-widest uppercase mb-4">07 / Unit Economics</motion.h2>
-            <motion.h3 variants={itemVariants} className="text-5xl font-bold tracking-tight mb-12">80% Gross Margin SaaS.</motion.h3>
+            <motion.h3 variants={itemVariants} className="text-3xl md:text-5xl font-bold tracking-tight mb-6 md:mb-12">80% Gross Margin SaaS.</motion.h3>
 
-            <div className="flex-1 flex flex-col lg:flex-row gap-16 items-center">
-              <motion.div variants={itemVariants} className="w-full lg:w-1/2 space-y-6">
-                <div className="mb-8">
+            <div className="flex-1 flex flex-col lg:flex-row gap-4 md:gap-6 md:p-8 lg:gap-16 items-center">
+              <motion.div variants={itemVariants} className="w-full lg:w-1/2 space-y-4 md:space-y-6">
+                <div className="mb-4 md:mb-8">
                   <p className="text-zinc-400 text-xl mb-2">Monthly Revenue per Driver</p>
-                  <p className="text-6xl font-bold text-white tracking-tighter">€150.00</p>
+                  <p className="text-4xl md:text-6xl font-bold text-white tracking-tighter">€150.00</p>
                 </div>
 
                 <div className="space-y-4">
@@ -395,11 +395,11 @@ export const slides = [
 
                 <div className="mt-8 p-6 bg-emerald-500/10 border border-emerald-500/20 rounded-xl flex justify-between items-center">
                   <span className="text-emerald-400 text-xl font-medium">Gross Profit</span>
-                  <span className="text-3xl font-bold text-emerald-300">€120.65 <span className="text-lg font-normal opacity-80">/ mo</span></span>
+                  <span className="text-2xl md:text-3xl font-bold text-emerald-300">€120.65 <span className="text-lg font-normal opacity-80">/ mo</span></span>
                 </div>
               </motion.div>
 
-              <motion.div variants={itemVariants} className="w-full lg:w-1/2 h-[400px]">
+              <motion.div variants={itemVariants} className="w-full lg:w-1/2 h-[250px] md:h-[400px]">
                 <ResponsiveContainer width="100%" height="100%">
                   <PieChart>
                     <Pie
@@ -443,31 +443,31 @@ export const slides = [
       ];
 
       return (
-        <div className="w-full h-full p-12 md:p-24 flex flex-col bg-zinc-950">
-          <motion.div variants={containerVariants} initial="hidden" animate="show" className="h-full flex flex-col">
+        <div className="w-full h-full p-6 md:p-12 lg:p-24 flex flex-col bg-zinc-950 overflow-y-auto">
+          <motion.div variants={containerVariants} initial="hidden" animate="show" className="min-h-full flex flex-col">
             <motion.h2 variants={itemVariants} className="text-amber-500 font-mono text-sm tracking-widest uppercase mb-4">08 / Financial Projections</motion.h2>
-            <motion.h3 variants={itemVariants} className="text-5xl font-bold tracking-tight mb-12">Path to Profitability.</motion.h3>
+            <motion.h3 variants={itemVariants} className="text-3xl md:text-5xl font-bold tracking-tight mb-6 md:mb-12">Path to Profitability.</motion.h3>
 
-            <div className="flex-1 flex flex-col lg:flex-row gap-16 items-center">
-              <motion.div variants={itemVariants} className="w-full lg:w-1/3 space-y-6">
+            <div className="flex-1 flex flex-col lg:flex-row gap-4 md:gap-6 md:p-8 lg:gap-16 items-center">
+              <motion.div variants={itemVariants} className="w-full lg:w-1/3 space-y-4 md:space-y-6">
                 <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-6">
                   <h4 className="text-zinc-400 text-sm uppercase tracking-wider mb-1">Year 5 Target MRR</h4>
-                  <p className="text-4xl font-bold text-white">€2.7M</p>
+                  <p className="text-3xl md:text-4xl font-bold text-white">€2.7M</p>
                   <p className="text-amber-500/80 text-sm mt-2">18,000 Active Drivers</p>
                 </div>
                 <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-6">
                   <h4 className="text-zinc-400 text-sm uppercase tracking-wider mb-1">Driver Acquisition Cost (DAC)</h4>
-                  <p className="text-4xl font-bold text-white">€300 <span className="text-xl text-zinc-500">→ €50</span></p>
+                  <p className="text-3xl md:text-4xl font-bold text-white">€300 <span className="text-xl text-zinc-500">→ €50</span></p>
                   <p className="text-emerald-500/80 text-sm mt-2">Decreases via network effects</p>
                 </div>
                 <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-6">
                   <h4 className="text-zinc-400 text-sm uppercase tracking-wider mb-1">Profitability</h4>
-                  <p className="text-4xl font-bold text-white">Year 3</p>
+                  <p className="text-3xl md:text-4xl font-bold text-white">Year 3</p>
                   <p className="text-blue-500/80 text-sm mt-2">EBITDA positive at 7,000 drivers</p>
                 </div>
               </motion.div>
 
-              <motion.div variants={itemVariants} className="w-full lg:w-2/3 h-[400px]">
+              <motion.div variants={itemVariants} className="w-full lg:w-2/3 h-[250px] md:h-[400px]">
                 <ResponsiveContainer width="100%" height="100%">
                   <AreaChart data={data} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
                     <defs>
@@ -503,24 +503,24 @@ export const slides = [
   {
     id: 'regulatory',
     component: () => (
-      <div className="w-full h-full p-12 md:p-24 flex flex-col bg-zinc-950 items-center justify-center">
+      <div className="w-full h-full p-6 md:p-12 lg:p-24 flex flex-col bg-zinc-950 items-center justify-center overflow-y-auto">
         <motion.div variants={containerVariants} initial="hidden" animate="show" className="w-full max-w-5xl">
-          <motion.div variants={itemVariants} className="text-center mb-16">
+          <motion.div variants={itemVariants} className="text-center mb-4 md:mb-16">
             <h2 className="text-amber-500 font-mono text-sm tracking-widest uppercase mb-4">09 / Foundation</h2>
-            <h3 className="text-5xl font-bold tracking-tight">Regulatory & Legal Roadmap.</h3>
+            <h3 className="text-3xl md:text-5xl font-bold tracking-tight">Regulatory & Legal Roadmap.</h3>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 md:p-8">
             {[
               { icon: Scale, title: 'Entity & Licensing', desc1: 'French SAS (Société par Actions Simplifiée).', desc2: 'Registered as "Centrale de Réservation" via the REVTC.' },
               { icon: ShieldCheck, title: 'Compliance', desc1: 'Full Loi LOM compliance.', desc2: 'Strict GDPR adherence for user data protection.' },
               { icon: Flag, title: 'Insurance', desc1: 'Platform-wide Professional Liability.', desc2: '(RC Pro) coverage.' },
             ].map((item, i) => (
-              <motion.div key={i} variants={itemVariants} className="bg-zinc-900/50 border border-zinc-800 rounded-3xl p-10 flex flex-col items-center text-center hover:bg-zinc-900 transition-colors">
-                <div className="w-20 h-20 rounded-full bg-zinc-950 border border-zinc-800 flex items-center justify-center mb-8">
+              <motion.div key={i} variants={itemVariants} className="bg-zinc-900/50 border border-zinc-800 rounded-3xl p-6 md:p-10 flex flex-col items-center text-center hover:bg-zinc-900 transition-colors">
+                <div className="w-20 h-20 rounded-full bg-zinc-950 border border-zinc-800 flex items-center justify-center mb-4 md:mb-8">
                   <item.icon className="w-10 h-10 text-amber-500" />
                 </div>
-                <h4 className="text-2xl font-semibold text-zinc-100 mb-6">{item.title}</h4>
+                <h4 className="text-xl md:text-2xl font-semibold text-zinc-100 mb-3 md:mb-6">{item.title}</h4>
                 <p className="text-zinc-400 mb-2">{item.desc1}</p>
                 <p className="text-zinc-400">{item.desc2}</p>
               </motion.div>
@@ -533,17 +533,17 @@ export const slides = [
   {
     id: 'tech',
     component: () => (
-      <div className="w-full h-full flex flex-col md:flex-row bg-zinc-950">
-        <div className="w-full md:w-1/2 p-12 md:p-24 flex flex-col justify-center">
+      <div className="w-full h-full flex flex-col md:flex-row bg-zinc-950 overflow-y-auto">
+        <div className="w-full md:w-1/2 p-6 md:p-12 lg:p-24 flex flex-col justify-center">
           <motion.div variants={containerVariants} initial="hidden" animate="show">
             <motion.h2 variants={itemVariants} className="text-amber-500 font-mono text-sm tracking-widest uppercase mb-4">10 / Tech Strategy</motion.h2>
-            <motion.h3 variants={itemVariants} className="text-5xl font-bold tracking-tight mb-12">The MVP.</motion.h3>
+            <motion.h3 variants={itemVariants} className="text-3xl md:text-5xl font-bold tracking-tight mb-6 md:mb-12">The MVP.</motion.h3>
             
-            <div className="space-y-10">
+            <div className="space-y-4 md:space-y-6 md:space-y-10">
               <motion.div variants={itemVariants} className="flex gap-6 items-start">
                 <Smartphone className="w-8 h-8 text-amber-500 shrink-0" />
                 <div>
-                  <h4 className="text-2xl font-semibold text-zinc-100 mb-2">Engine</h4>
+                  <h4 className="text-xl md:text-2xl font-semibold text-zinc-100 mb-2">Engine</h4>
                   <p className="text-zinc-400 text-lg">High-end White-Label solution for rapid time-to-market.</p>
                 </div>
               </motion.div>
@@ -551,7 +551,7 @@ export const slides = [
               <motion.div variants={itemVariants} className="flex gap-6 items-start">
                 <Zap className="w-8 h-8 text-amber-500 shrink-0" />
                 <div>
-                  <h4 className="text-2xl font-semibold text-zinc-100 mb-2">Key Features</h4>
+                  <h4 className="text-xl md:text-2xl font-semibold text-zinc-100 mb-2">Key Features</h4>
                   <p className="text-zinc-400 text-lg">Subscription billing, priority dispatch, and French language localization.</p>
                 </div>
               </motion.div>
@@ -559,7 +559,7 @@ export const slides = [
               <motion.div variants={itemVariants} className="flex gap-6 items-start">
                 <Euro className="w-8 h-8 text-amber-500 shrink-0" />
                 <div>
-                  <h4 className="text-2xl font-semibold text-zinc-100 mb-2">Payment</h4>
+                  <h4 className="text-xl md:text-2xl font-semibold text-zinc-100 mb-2">Payment</h4>
                   <p className="text-zinc-400 text-lg">Integrated with Stripe Connect for instant driver payouts.</p>
                 </div>
               </motion.div>
@@ -574,7 +574,7 @@ export const slides = [
             transition={{ delay: 0.3, type: "spring" }}
             className="relative w-64 h-[500px] bg-zinc-950 rounded-[3rem] border-8 border-zinc-800 shadow-2xl overflow-hidden"
           >
-            <div className="w-full h-full flex flex-col">
+            <div className="w-full min-h-full flex flex-col">
               <div className="h-20 bg-zinc-900 flex items-end justify-between px-6 pb-4">
                 <div className="w-8 h-8 rounded-full bg-zinc-800" />
                 <div className="w-24 h-4 rounded bg-zinc-800" />
@@ -594,12 +594,12 @@ export const slides = [
   {
     id: 'open-source',
     component: () => (
-      <div className="w-full h-full p-12 md:p-24 flex flex-col bg-zinc-950">
-        <motion.div variants={containerVariants} initial="hidden" animate="show" className="h-full flex flex-col">
+      <div className="w-full h-full p-6 md:p-12 lg:p-24 flex flex-col bg-zinc-950 overflow-y-auto">
+        <motion.div variants={containerVariants} initial="hidden" animate="show" className="min-h-full flex flex-col">
           <motion.h2 variants={itemVariants} className="text-amber-500 font-mono text-sm tracking-widest uppercase mb-4">11 / The Open Source Advantage</motion.h2>
-          <motion.h3 variants={itemVariants} className="text-5xl font-bold tracking-tight mb-12">Built on Trust & Community.</motion.h3>
+          <motion.h3 variants={itemVariants} className="text-3xl md:text-5xl font-bold tracking-tight mb-6 md:mb-12">Built on Trust & Community.</motion.h3>
           
-          <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 md:p-8">
             {[
               { 
                 icon: ShieldCheck, 
@@ -634,11 +634,11 @@ export const slides = [
                 border: 'border-purple-500/20'
               },
             ].map((item, i) => (
-              <motion.div key={i} variants={itemVariants} className={`p-8 rounded-3xl border ${item.border} bg-zinc-900/50 flex flex-col`}>
-                <div className={`w-14 h-14 rounded-2xl ${item.bg} flex items-center justify-center mb-6`}>
+              <motion.div key={i} variants={itemVariants} className={`p-6 md:p-8 rounded-3xl border ${item.border} bg-zinc-900/50 flex flex-col`}>
+                <div className={`w-14 h-14 rounded-2xl ${item.bg} flex items-center justify-center mb-3 md:mb-6`}>
                   <item.icon className={`w-7 h-7 ${item.color}`} />
                 </div>
-                <h4 className="text-2xl font-semibold text-zinc-100 mb-3">{item.title}</h4>
+                <h4 className="text-xl md:text-2xl font-semibold text-zinc-100 mb-3">{item.title}</h4>
                 <p className="text-zinc-400 text-lg leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
@@ -650,12 +650,12 @@ export const slides = [
   {
     id: 'defensibility',
     component: () => (
-      <div className="w-full h-full p-12 md:p-24 flex flex-col bg-zinc-950">
-        <motion.div variants={containerVariants} initial="hidden" animate="show" className="h-full flex flex-col">
+      <div className="w-full h-full p-6 md:p-12 lg:p-24 flex flex-col bg-zinc-950 overflow-y-auto">
+        <motion.div variants={containerVariants} initial="hidden" animate="show" className="min-h-full flex flex-col">
           <motion.h2 variants={itemVariants} className="text-amber-500 font-mono text-sm tracking-widest uppercase mb-4">12 / Defensibility & Moat</motion.h2>
-          <motion.h3 variants={itemVariants} className="text-5xl font-bold tracking-tight mb-12">Execution &gt; Code.</motion.h3>
+          <motion.h3 variants={itemVariants} className="text-3xl md:text-5xl font-bold tracking-tight mb-6 md:mb-12">Execution &gt; Code.</motion.h3>
           
-          <div className="flex-1 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 md:p-8">
             {[
               { 
                 risk: 'The "Copycat" Risk', 
@@ -673,8 +673,8 @@ export const slides = [
                 icon: Flag
               },
             ].map((item, i) => (
-              <motion.div key={i} variants={itemVariants} className="bg-zinc-900/50 border border-zinc-800 rounded-3xl p-8 flex flex-col relative overflow-hidden group hover:border-amber-500/30 transition-colors">
-                <div className="w-12 h-12 rounded-full bg-zinc-800 flex items-center justify-center mb-6 group-hover:bg-amber-500/20 transition-colors">
+              <motion.div key={i} variants={itemVariants} className="bg-zinc-900/50 border border-zinc-800 rounded-3xl p-6 md:p-8 flex flex-col relative overflow-hidden group hover:border-amber-500/30 transition-colors">
+                <div className="w-12 h-12 rounded-full bg-zinc-800 flex items-center justify-center mb-3 md:mb-6 group-hover:bg-amber-500/20 transition-colors">
                   <item.icon className="w-6 h-6 text-zinc-400 group-hover:text-amber-500 transition-colors" />
                 </div>
                 <h4 className="text-xl font-bold text-red-400 mb-2">Risk: {item.risk}</h4>
@@ -685,7 +685,7 @@ export const slides = [
             ))}
           </div>
           
-          <motion.div variants={itemVariants} className="mt-12 bg-amber-500/10 border border-amber-500/30 rounded-2xl p-8 text-center">
+          <motion.div variants={itemVariants} className="mt-6 md:mt-12 bg-amber-500/10 border border-amber-500/30 rounded-2xl p-6 md:p-8 text-center">
             <p className="text-zinc-300 text-lg">Investors often overvalue proprietary code. In mobility, the ultimate defensible asset is <strong className="text-white">Brand Trust and Driver Supply.</strong></p>
           </motion.div>
         </motion.div>
@@ -695,18 +695,18 @@ export const slides = [
   {
     id: 'tech-roadmap',
     component: () => (
-      <div className="w-full h-full p-12 md:p-24 flex flex-col bg-zinc-950 overflow-y-auto">
+      <div className="w-full h-full p-6 md:p-12 lg:p-24 flex flex-col bg-zinc-950 overflow-y-auto">
         <motion.div variants={containerVariants} initial="hidden" animate="show" className="min-h-full flex flex-col">
           <motion.h2 variants={itemVariants} className="text-amber-500 font-mono text-sm tracking-widest uppercase mb-4">13 / Technical Roadmap</motion.h2>
-          <motion.h3 variants={itemVariants} className="text-5xl font-bold tracking-tight mb-12">How We Build It.</motion.h3>
+          <motion.h3 variants={itemVariants} className="text-3xl md:text-5xl font-bold tracking-tight mb-6 md:mb-12">How We Build It.</motion.h3>
           
-          <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
             {/* Left Column: Tech Stack & Tools */}
-            <motion.div variants={itemVariants} className="space-y-8">
-              <div className="bg-zinc-900/50 border border-zinc-800 rounded-3xl p-8">
-                <h4 className="text-2xl font-bold text-white mb-6 border-b border-zinc-800 pb-4">The Tech Stack (Fast & Modern)</h4>
+            <motion.div variants={itemVariants} className="space-y-4 md:space-y-8">
+              <div className="bg-zinc-900/50 border border-zinc-800 rounded-3xl p-6 md:p-8">
+                <h4 className="text-2xl font-bold text-white mb-3 md:mb-6 border-b border-zinc-800 pb-4">The Tech Stack (Fast & Modern)</h4>
                 
-                <div className="space-y-6">
+                <div className="space-y-4 md:space-y-6">
                   <div>
                     <h5 className="text-amber-500 font-mono text-sm uppercase tracking-wider mb-2">Frontend (Rider & Driver Apps)</h5>
                     <p className="text-zinc-300"><strong className="text-white">React Native (with Expo)</strong></p>
@@ -735,10 +735,10 @@ export const slides = [
             </motion.div>
 
             {/* Right Column: Step-by-Step Process */}
-            <motion.div variants={itemVariants} className="space-y-6">
+            <motion.div variants={itemVariants} className="space-y-4 md:space-y-6">
                <h4 className="text-2xl font-bold text-white mb-2">Step-by-Step Execution</h4>
                
-               <div className="relative pl-8 border-l border-zinc-800 space-y-8">
+               <div className="relative pl-8 border-l border-zinc-800 space-y-4 md:space-y-8">
                  {[
                    {
                      step: 'Phase 1: Architecture & Backend Setup (Weeks 1-3)',
@@ -777,12 +777,12 @@ export const slides = [
   {
     id: 'acquisition',
     component: () => (
-      <div className="w-full h-full p-12 md:p-24 flex flex-col bg-zinc-950">
-        <motion.div variants={containerVariants} initial="hidden" animate="show" className="h-full flex flex-col">
+      <div className="w-full h-full p-6 md:p-12 lg:p-24 flex flex-col bg-zinc-950 overflow-y-auto">
+        <motion.div variants={containerVariants} initial="hidden" animate="show" className="min-h-full flex flex-col">
           <motion.h2 variants={itemVariants} className="text-amber-500 font-mono text-sm tracking-widest uppercase mb-4">14 / Go-To-Market</motion.h2>
-          <motion.h3 variants={itemVariants} className="text-5xl font-bold tracking-tight mb-16">Rider Acquisition Strategy.</motion.h3>
+          <motion.h3 variants={itemVariants} className="text-3xl md:text-5xl font-bold tracking-tight mb-4 md:mb-16">Rider Acquisition Strategy.</motion.h3>
           
-          <div className="flex-1 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 md:p-8">
             {[
               { 
                 title: 'The "Ethical Alternative"', 
@@ -802,9 +802,9 @@ export const slides = [
             ].map((item, i) => (
               <motion.div key={i} variants={itemVariants} className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-b from-amber-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-3xl" />
-                <div className="h-full bg-zinc-900/50 border border-zinc-800 rounded-3xl p-10 flex flex-col relative z-10">
-                  <span className="text-xs font-mono text-amber-500 mb-6 uppercase tracking-wider">{item.highlight}</span>
-                  <h4 className="text-3xl font-light text-white mb-6">{item.title}</h4>
+                <div className="h-full bg-zinc-900/50 border border-zinc-800 rounded-3xl p-6 md:p-10 flex flex-col relative z-10">
+                  <span className="text-xs font-mono text-amber-500 mb-3 md:mb-6 uppercase tracking-wider">{item.highlight}</span>
+                  <h4 className="text-2xl md:text-3xl font-light text-white mb-3 md:mb-6">{item.title}</h4>
                   <p className="text-zinc-400 text-lg leading-relaxed">{item.desc}</p>
                 </div>
               </motion.div>
@@ -817,17 +817,17 @@ export const slides = [
   {
     id: 'roadmap',
     component: () => (
-      <div className="w-full h-full p-12 md:p-24 flex flex-col bg-zinc-950 justify-center">
+      <div className="w-full h-full p-6 md:p-12 lg:p-24 flex flex-col bg-zinc-950 justify-center overflow-y-auto">
         <motion.div variants={containerVariants} initial="hidden" animate="show" className="w-full max-w-6xl mx-auto">
           <motion.div variants={itemVariants} className="text-center mb-20">
             <h2 className="text-amber-500 font-mono text-sm tracking-widest uppercase mb-4">15 / Execution</h2>
-            <h3 className="text-5xl font-bold tracking-tight">The Roadmap (Day 1 - Month 12).</h3>
+            <h3 className="text-3xl md:text-5xl font-bold tracking-tight">The Roadmap (Day 1 - Month 12).</h3>
           </motion.div>
           
           <div className="relative">
             <div className="absolute top-1/2 left-0 w-full h-1 bg-zinc-800 -translate-y-1/2 hidden md:block" />
             
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 md:p-8 relative z-10">
               {[
                 { time: 'Months 1-2', title: 'Foundation', desc: 'Legal setup, REVTC registration, and Tech customization.' },
                 { time: 'Months 3-4', title: 'Supply', desc: 'Driver Onboarding (The "Founding 500" - 3 months free).' },
@@ -836,7 +836,7 @@ export const slides = [
               ].map((item, i) => (
                 <motion.div key={i} variants={itemVariants} className="relative pt-8 md:pt-0">
                   <div className="hidden md:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-amber-500 border-4 border-zinc-950" />
-                  <div className={`bg-zinc-900 border border-zinc-800 rounded-2xl p-6 ${i % 2 === 0 ? 'md:mb-16' : 'md:mt-16'}`}>
+                  <div className={`bg-zinc-900 border border-zinc-800 rounded-2xl p-6 ${i % 2 === 0 ? 'md:mb-4 md:mb-16' : 'md:mt-16'}`}>
                     <span className="text-amber-500 font-mono text-sm mb-2 block">{item.time}</span>
                     <h4 className="text-xl font-bold text-white mb-2">{item.title}</h4>
                     <p className="text-zinc-400 text-sm">{item.desc}</p>
@@ -860,19 +860,19 @@ export const slides = [
       ];
 
       return (
-        <div className="w-full h-full p-12 md:p-24 flex flex-col bg-zinc-950">
-          <motion.div variants={containerVariants} initial="hidden" animate="show" className="h-full flex flex-col">
+        <div className="w-full h-full p-6 md:p-12 lg:p-24 flex flex-col bg-zinc-950 overflow-y-auto">
+          <motion.div variants={containerVariants} initial="hidden" animate="show" className="min-h-full flex flex-col">
             <motion.h2 variants={itemVariants} className="text-amber-500 font-mono text-sm tracking-widest uppercase mb-4">16 / Ask</motion.h2>
-            <motion.h3 variants={itemVariants} className="text-5xl font-bold tracking-tight mb-12">Seed Funding Request.</motion.h3>
+            <motion.h3 variants={itemVariants} className="text-3xl md:text-5xl font-bold tracking-tight mb-6 md:mb-12">Seed Funding Request.</motion.h3>
             
-            <div className="flex-1 flex flex-col lg:flex-row gap-16 items-center">
+            <div className="flex-1 flex flex-col lg:flex-row gap-4 md:gap-6 md:p-8 lg:gap-16 items-center">
               <motion.div variants={itemVariants} className="w-full lg:w-1/2">
-                <div className="mb-12">
+                <div className="mb-6 md:mb-12">
                   <p className="text-zinc-400 text-xl mb-2">Target Raise</p>
-                  <p className="text-7xl font-bold text-white tracking-tighter">€450,000</p>
+                  <p className="text-5xl md:text-7xl font-bold text-white tracking-tighter">€450,000</p>
                 </div>
                 
-                <div className="space-y-6">
+                <div className="space-y-4 md:space-y-6">
                   {[
                     { title: 'Marketing (40%)', desc: 'Rider acquisition & Brand building.', color: 'bg-amber-500' },
                     { title: 'Technology (30%)', desc: 'App maintenance, API fees, and customization.', color: 'bg-emerald-500' },
@@ -890,7 +890,7 @@ export const slides = [
                 </div>
               </motion.div>
 
-              <motion.div variants={itemVariants} className="w-full lg:w-1/2 h-[400px]">
+              <motion.div variants={itemVariants} className="w-full lg:w-1/2 h-[250px] md:h-[400px]">
                 <ResponsiveContainer width="100%" height="100%">
                   <PieChart>
                     <Pie
@@ -939,15 +939,15 @@ export const slides = [
           variants={containerVariants}
           initial="hidden"
           animate="show"
-          className="relative z-10 max-w-4xl w-full px-12 text-center"
+          className="relative z-10 max-w-4xl w-full px-6 md:px-12 text-center"
         >
-          <motion.h2 variants={itemVariants} className="text-amber-500 font-mono text-sm tracking-widest uppercase mb-8">17 / The Vision</motion.h2>
+          <motion.h2 variants={itemVariants} className="text-amber-500 font-mono text-sm tracking-widest uppercase mb-4 md:mb-8">17 / The Vision</motion.h2>
           
-          <motion.h3 variants={itemVariants} className="text-6xl md:text-8xl font-bold tracking-tighter mb-8 text-white">
+          <motion.h3 variants={itemVariants} className="text-4xl md:text-6xl lg:text-8xl font-bold tracking-tighter mb-4 md:mb-8 text-white">
             Join the Revolution.
           </motion.h3>
           
-          <motion.p variants={itemVariants} className="text-2xl md:text-3xl font-light text-zinc-300 mb-12 leading-relaxed">
+          <motion.p variants={itemVariants} className="text-lg md:text-2xl lg:text-2xl md:text-3xl font-light text-zinc-300 mb-6 md:mb-12 leading-relaxed">
             Building a sustainable, fair, and profitable future for mobility in Paris.
           </motion.p>
           
